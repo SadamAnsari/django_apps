@@ -1,0 +1,90 @@
+table {
+	border-collapse:collapse;
+	padding:0px;
+	margin:0px;
+}
+th, td {
+    border: 1px solid black;
+	padding: 3px 0 2px 5px;
+}
+th {
+	text-align:center;
+}
+.border {
+    border: 1px solid black;
+}
+.lborder {
+    border-left: 1px solid black;
+	padding: 0px 0 0 5px;
+}
+.main {
+    width: 640px;
+    margin: auto;
+	font-size: 11px;
+	font-family:arial,helvetica,sans-serif;
+	border-collapse:collapse;
+}
+.top {
+    width: 100%;
+    text-align: center;
+}
+.title {
+	font-weight: bold;
+	font-size:16px;
+	padding: 2px 0;
+}
+.heading {
+	font-weight: 600;
+}
+.thirty {
+	width:40%;
+	float: left;
+}
+.sixty {
+	width:60%;
+	float: left;
+}
+.pull-left {
+	float: left;
+}
+.pull-right {
+	float: right;
+	padding-right: 5px;
+}
+.right {
+	text-align:right;
+	padding-right: 5px;
+}
+.small {
+	width: 15%;
+}
+.medium {
+	width: 35%;
+}
+.fifty {
+	width: 50%;
+}
+.textarea {
+	white-space:pre;
+	min-height:50px;
+}
+.item {
+}
+.item td {
+	border-bottom: none !important;
+	border-top: none !important;
+}
+.bottom {
+	vertical-align:bottom;
+	padding-bottom:2px;
+	text-align: center;
+	border-bottom: none !important;
+	border-top: none !important;
+}
+.top {
+	vertical-align:bottom;
+	padding-top:2px;
+	text-align: center;
+	border-bottom: none !important;
+	border-top: none !important;
+}

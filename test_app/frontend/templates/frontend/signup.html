@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Signup</title>
+    {% load staticfiles %}
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'frontend/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="{% static 'frontend/css/metisMenu.min.css' %}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{% static 'frontend/css/startmin.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'frontend/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="login-panel panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Please Sign Up</h3>
+                </div>
+                <div class="panel-body">
+                    {% if error_message %}
+                    <div class="alert alert-danger fade in">
+                        <a href="#" class="close" data-dismiss="alert">&times;</a>
+                        <strong>Error!</strong> {{ error_message }}
+                    </div>
+                    {% endif %}
+                    {% if message %}
+                    <div class="alert alert-success fade in">
+                        <a href="#" class="close" data-dismiss="alert">&times;</a>
+                        <strong>{{ message }}</strong>
+                    </div>
+                    {% endif %}
+                    <form class="form-signup" role="form" action="{% url 'frontend:signup'%}" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <fieldset>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="First name" name="first_name" type="text" autofocus required>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Last name" name="last_name" type="text" autofocus required>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Email" name="email" type="email" autofocus required>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Username" name="username" type="text" autofocus required>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Password" name="password1" type="password" value="" required>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Confirm Password" name="password2" type="password" value="" required>
+                            </div>
+                            <button type="submit" class="btn btn-lg btn-success ">Signup</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="{% static 'frontend/js/jquery.min.js' %}"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="{% static 'frontend/js/bootstrap.min.js' %}"></script>
+
+<!-- Metis Menu Plugin JavaScript -->
+<script src="{% static 'frontend/js/metisMenu.min.js' %}"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="{% static 'frontend/js/startmin.js' %}"></script>
+
+</body>
+
+</html>
